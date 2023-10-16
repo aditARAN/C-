@@ -1,46 +1,50 @@
-// C++ program to create student class, read and print N student's details
-// (Example of array of objects)
+
 
 #include <iostream>
 using namespace std;
 
 #define MAX 10
 
-class stud {
-public:
+class emp {
+private:
     string name;
     string id,br;
-    //member function to get student's details
+    int ag;
+
+public:
+  
     void getDetails(void);
-    //member function to print student's details
+
     void putDetails(void);
 };
 
 //member function definition, outside of the class
-void stud::getDetails(void)
+void emp::getDetails(void)
 {
     cout << "Enter name: ";
     cin >> name;
-    cout << "Enter roll number: ";
+    cout << "Enter Employee ID: ";
     cin >> id;
-    cout << "Enter Branch";
+    cout << "Enter Company";
     cin >> br;
+    cout<< "Enter age: ";
+    cin >> ag;
 }
 
 //member function definition, outside of the class
-void stud::putDetails(void)
+void emp::putDetails(void)
 {
-    cout << "Student details:\n";
-    cout << "Name:" << name << ",Roll Number:" << id << ",Branch:" << br ;
+    cout << "Emplyee details:\n";
+    cout << "Name:" << name << ",Employee ID:" << id << ",Company:" << br <<",Age: "<<ag;
 }
 
 int main()
 {
-    stud std;
-    cout << "Enter details of student: \n";
+    emp std;
+    cout << "Enter details of Employee: \n";
     std.getDetails();
     cout << endl;
-    cout << "Details of student:\n";
+    cout << "Details of Employee:\n";
     std.putDetails();
     
 
